@@ -21,6 +21,9 @@ do
 current=$(./tempread)
 echo "$current"
 let diff=$current-$temp
+if [ $diff -lt 0 ] ; then
+let diff=$temp-$current
+fi
 if [ $diff -gt 1000 ] ; then
 gpio write 0 1
 fi
