@@ -14,4 +14,6 @@ sleep 3
 
 git push
 
+break
+
 done
